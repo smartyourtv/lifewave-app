@@ -1,0 +1,149 @@
+{
+ "entries": [
+  {
+   "audience": "public",
+   "body": "Per the company: a LifeWave patch is a non-transdermal phototherapy patch. Your body emits heat, including in the infrared spectrum; the patch is designed to trap that infrared energy and reflect it back to stimulate specific points on the skin, which the company says can promote a general state of health and healthy activity unique to each patch. There is no lamp, battery or external light source - and no patch is worn for more than 12 hours at a time (see the usage topic). The company positions the products for general wellness, not as treatments for any condition.",
+   "claim_label": "official fact",
+   "id": "faq-what-is-it",
+   "source_ref": "https://2480581.lifewavenow.app/05d48f7c12",
+   "source_type": "official-site",
+   "title": "What is a LifeWave patch?",
+   "topic": "faq",
+   "updated": "2026-10-17"
+  },
+  {
+   "audience": "public",
+   "body": "The company's official answer, repeated on its product pages and FAQ: no. The patches are non-transdermal - no drugs, chemicals or stimulants enter the body. Unlike a nicotine or hormone patch, nothing is delivered through the skin; per the company, the patch works with the body's own infrared energy. Every product page also carries the company's disclaimer that its statements have not been evaluated by the FDA and the products are not intended to diagnose, treat, cure, or prevent any disease.",
+   "claim_label": "official fact",
+   "id": "faq-drug-or-chemical",
+   "source_ref": "https://2480581.lifewavenow.app/05d48f7c12",
+   "source_type": "official-site",
+   "title": "\"Is it a drug? Does anything enter my body?\"",
+   "topic": "faq",
+   "updated": "2026-10-17"
+  },
+  {
+   "audience": "public",
+   "body": "For X39, there is now an official number: the company's official X39 sales sheet (SALES-X39-EN_R02) states that an X39 pack contains 30 patches. On the standard X39 routine - one patch a day, worn up to 12 hours - that is a month's supply per pack. Careful limit: the sales sheet states the 30 count for X39; this database does not generalize that number to every patch product, because no official source fetched states a count for the other patches. More generally, patches are sold by the sleeve/pack, and the company's enrollment document measures product in sleeves on a monthly pattern (for example, a Core enrollment is 3 sleeves of X39 or X49), while the Y-Age and night patches are used on their own schedules (see the usage topic), so a pack stretches further for those. For any product other than X39, check the packaging or the product page in the official store for the current count.",
+   "claim_label": "official fact",
+   "id": "faq-how-many-per-sleeve",
+   "source_ref": "LifeWave Back Office — X39 sales sheet, SALES-X39-EN_R02 (30 patches per X39 pack), retrieved 2026-10-17; enrollment sleeve pattern: https://lifewave.com/kls64/home/our-product-difference",
+   "source_type": "official-site",
+   "title": "How many patches come in a sleeve - and how long does one last?",
+   "topic": "faq",
+   "updated": "2026-10-17"
+  },
+  {
+   "audience": "public",
+   "body": "Up to 12 hours, then discard it - that is the instruction on every official patch page. Daytime patches go on in the morning and night patches (Silent Nights, Alavida) go on in the evening. Patches are single-use: the official warning says do not reuse a patch once it has been removed from the skin. Full detail is in the usage topic (usage-wear-basics).",
+   "claim_label": "official fact",
+   "id": "faq-how-long-wear",
+   "source_ref": "https://lifewave.com/kls64/home/our-product-difference",
+   "source_type": "official-site",
+   "title": "How long do I wear each patch?",
+   "topic": "faq",
+   "updated": "2026-10-17"
+  },
+  {
+   "audience": "public",
+   "body": "LifeWave sells through independent Brand Partners, not off a retail shelf. You order on a Brand Partner's official replicated store link - usually the link of the person who introduced you - as a retail customer (one-time price) or as a Preferred Customer on Subscribe & Save (the lower monthly-subscription tier). You can also enroll as a Brand Partner yourself (see the business topic). Per the company's official terms, only authorized Brand Partners may resell the products, and selling them on unauthorized sites such as Amazon, eBay or Facebook is strictly prohibited - so a marketplace listing is not an authorized channel, whatever its price.",
+   "claim_label": "official fact",
+   "id": "faq-how-to-buy",
+   "source_ref": "https://lifewave.com/2969402/home/terms-of-use",
+   "source_type": "official-site",
+   "title": "How do I buy LifeWave products?",
+   "topic": "faq",
+   "updated": "2026-10-17"
+  },
+  {
+   "audience": "public",
+   "body": "Official terms: Retail and Preferred Customers get a 90-day, 100% money-back guarantee on the initial (first-time) order on their account. If dissatisfied, the company offers a full refund excluding shipping fees, as long as the refund request reaches LifeWave within 90 days of the order's original shipping date; returning unused product or packaging is not required for that first order. Later orders carry a 30-day refund window under the same official terms. The 90-day guarantee applies once per account - it is void if duplicate accounts are created to claim it repeatedly.",
+   "claim_label": "official fact",
+   "id": "faq-guarantee-customers",
+   "source_ref": "https://lifewave.com/2969402/home/terms-of-use",
+   "source_type": "official-site",
+   "title": "What is the money-back guarantee for customers?",
+   "topic": "faq",
+   "updated": "2026-10-17"
+  },
+  {
+   "audience": "public",
+   "body": "Official terms: a Brand Partner's initial order carries a 30-day money-back guarantee - a full refund excluding shipping fees if the request is received within 30 days of the original ship date. The opened package the product was used from must be returned (multiple packages of the same product must otherwise be unopened and resalable), an RMA number from Customer Service is required before returning anything, return shipping is the Brand Partner's cost, and returning the initial order cancels the Brand Partner's business-center activation.",
+   "claim_label": "official fact",
+   "id": "faq-guarantee-brand-partners",
+   "source_ref": "https://lifewave.com/2969402/home/terms-of-use",
+   "source_type": "official-site",
+   "title": "What is the money-back guarantee for Brand Partners?",
+   "topic": "faq",
+   "updated": "2026-10-17"
+  },
+  {
+   "audience": "public",
+   "body": "Answer with the official price structure, not pressure. Every product has two prices: a one-time retail price and a lower Subscribe & Save price for a monthly subscription - on X39 that is US retail $149.95 vs Subscribe & Save $99.95 (checked 2026-10-17; see the products topic). Brand Partners buy at the lower tier. Some patches also carry official quantity pricing (for example Aeon at retail: 1 for $79.95, 2 for $74.95 each, 3 or more for $69.95 each). And the risk answer is official too: a first customer order carries the 90-day money-back guarantee (faq-guarantee-customers), so trying it is not a one-way door.",
+   "claim_label": "official fact",
+   "id": "faq-price-objection",
+   "source_ref": "https://www.lifewave.com/christinaditchkofsky/store/product/39000.022.009",
+   "source_type": "official-site",
+   "title": "\"Why does it cost that much?\" - the price answer",
+   "topic": "faq",
+   "updated": "2026-10-17"
+  },
+  {
+   "audience": "public",
+   "body": "The compliance-safe answer: the company makes no promise about when - or whether - any individual will notice anything, and neither should you. What can honestly be said: everyone's experience is their own; the products are positioned by the company for general wellness and healthy activity; and the official 90-day money-back guarantee on a first customer order exists precisely so a new customer has a real window to judge their own experience before deciding. Anyone who quotes you a guaranteed timeline or a guaranteed result is going beyond what the company states.",
+   "claim_label": "official fact",
+   "id": "faq-how-soon-results",
+   "source_ref": "https://lifewave.com/2969402/home/terms-of-use",
+   "source_type": "official-site",
+   "title": "\"How soon will I notice anything?\"",
+   "topic": "faq",
+   "updated": "2026-10-17"
+  },
+  {
+   "audience": "public",
+   "body": "Follow the company's own printed guidance, which is a consult-your-doctor framing, not a yes: the official patch warning says to consult a health professional before using if you have a health condition, and not to use the patches if pregnant or nursing. The company's general guidance on its official pages adds: always consult with your physician or other qualified health care provider before embarking on a new health regimen, and do not disregard medical advice you have received or delay seeking it. This app does not give medical advice - bring the product information to your own doctor or pharmacist and let them answer for your situation.",
+   "claim_label": "official fact",
+   "id": "faq-medications-doctor",
+   "source_ref": "https://2480581.lifewavenow.app/05d48f7c12",
+   "source_type": "official-site",
+   "title": "\"I take medication / have a condition - can I use these?\"",
+   "topic": "faq",
+   "updated": "2026-10-17"
+  },
+  {
+   "audience": "public",
+   "body": "Honest answer, from the company's own printed disclaimer: every official product page states that the product's statements have not been evaluated by the Food and Drug Administration and that the product is not intended to diagnose, treat, cure, or prevent any disease. The company markets the patches as general-wellness products. Anyone describing them as FDA-approved treatments is not repeating the company's own wording.",
+   "claim_label": "official fact",
+   "id": "faq-fda-status",
+   "source_ref": "https://www.lifewave.com/christinaditchkofsky/store/product/39000.022.009",
+   "source_type": "official-site",
+   "title": "\"Are the patches FDA approved?\"",
+   "topic": "faq",
+   "updated": "2026-10-17"
+  },
+  {
+   "audience": "public",
+   "body": "The official instruction covers this directly: remove the patch immediately if discomfort or skin irritation occurs. The related official guidance: never apply a patch to wounds or damaged skin - clean, dry, unbroken skin only - and do not reuse a patch once removed. If irritation persists, that is a question for a health professional, not for a patch-placement chart.",
+   "claim_label": "official fact",
+   "id": "faq-side-effects-irritation",
+   "source_ref": "https://www.lifewave.com/christinaditchkofsky/store/product/39000.022.009",
+   "source_type": "official-site",
+   "title": "\"What if my skin reacts, or it feels uncomfortable?\"",
+   "topic": "faq",
+   "updated": "2026-10-17"
+  },
+  {
+   "audience": "public",
+   "body": "Three levels, in order. (1) Official facts: the company's product pages, its official placement guide, and the science/FAQ pages on its official and replicated sites - this app's database is built from those. (2) Deeper product teaching and member discussion live inside the LifeWave learning groups (LW Team Learning and LW Distributor Learning) - the group-pointers topic in this app points to them; detailed protocols and training are group material and are deliberately not reproduced here. (3) Personal questions - ordering, your account, refunds - go to the Brand Partner who introduced you, or to LifeWave Customer Service.",
+   "claim_label": "official fact",
+   "id": "faq-where-to-learn-more",
+   "source_ref": "https://lifewave.com/kls64/home/our-product-difference",
+   "source_type": "official-site",
+   "title": "Where can I learn more?",
+   "topic": "faq",
+   "updated": "2026-10-17"
+  }
+ ],
+ "note": "General-knowledge FAQ and objection handling anchored in official facts: the company's official FAQ framing, its official terms (guarantees, resale rules), and official store pricing. Where the company gives no timeline or guarantee of results, the entry says so - no efficacy promises are made anywhere in this file.",
+ "topic": "faq"
+}

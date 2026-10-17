@@ -1,0 +1,248 @@
+{
+ "entries": [
+  {
+   "audience": "public",
+   "body": "LifeWave products are sold through independent Brand Partners. Per the company's official pages: you enroll through a sponsoring Brand Partner's replicated website, choose an enrollment kit built around products you like, sign the Brand Partner Agreement, and start sharing the products. The company states that Brand Partners are rewarded for purchases made by both customers and Brand Partners, with opportunity for immediate and long-term income - and that commissions cannot be earned merely by sponsoring or recruiting others.",
+   "claim_label": "official fact",
+   "id": "biz-brand-partner-basics",
+   "source_ref": "https://lifenrg.lifewavenow.app/52db963e7c",
+   "source_type": "official-site",
+   "title": "Becoming a Brand Partner - the basics (official)",
+   "topic": "business",
+   "updated": "2026-10-17"
+  },
+  {
+   "audience": "public",
+   "body": "From the company's official enrollment-packs document (code MKT-SL-ENROLKIT-EUR-EN R01, prices US/EU): Core Enrollment $295 - 3 sleeves of X39 or X49, or 6 sleeves of any other patch. Advanced Enrollment $535 - 6 sleeves of X39/X49, or 12 of any other patch. Premium Enrollment $1,750 - 20 sleeves of X39/X49, or 40 of any other patch. The document also states product purchases are not required to enroll: you can become a Brand Partner with the Enrollment Kit alone for $25, and a $25 renewal fee is charged each year on the enrollment anniversary (some countries exempt). Caution: the company announced a Compensation Plan 2.0 rollout in 2025 - confirm the current packs and prices in the official Back Office documents before quoting them.",
+   "claim_label": "official fact",
+   "id": "biz-enrollment-packs",
+   "source_ref": "https://cdn.sanity.io/files/abq8rp7f/qa/78e5e21d257bd6da5843c40a84eff58f8570cd26.pdf",
+   "source_type": "official-site",
+   "title": "Enrollment packs (official enrollment document)",
+   "topic": "business",
+   "updated": "2026-10-17"
+  },
+  {
+   "audience": "public",
+   "body": "Every product on the official store carries two prices: a one-time retail price and a lower Subscribe & Save price for a monthly subscription (for example X39: US retail $149.95 / Subscribe & Save $99.95, checked 2026-10-17). Brand Partners buy at the lower tier, so a sale to a retail customer earns the difference between the two prices (on the X39 example, $50). Official guarantees on product pages: 90-day money-back guarantee on a first order for retail/preferred customers; 30-day for Brand Partners.",
+   "claim_label": "official fact",
+   "id": "biz-pricing-model",
+   "source_ref": "https://www.lifewave.com/christinaditchkofsky/store/product/39000.022.009",
+   "source_type": "official-site",
+   "title": "Retail vs Subscribe & Save pricing (official store)",
+   "topic": "business",
+   "updated": "2026-10-17"
+  },
+  {
+   "audience": "public",
+   "body": "The official Earnings Disclosure Statement (EDS) is now in hand from the Back Office. It is the 2024 U.S. Earnings Disclosure Statement - the 2024 edition, and the only edition posted in the LifeWave Back Office (checked 2026-10-17); do not call it a current-year or latest edition without the 2024 year attached. What it covers: the earnings of U.S. Brand Partners for sales that occurred in 2024, presented by the company as a compliance disclosure, not as advertising. It states that the opportunity is based on product sales, that a Brand Partner cannot earn commissions merely by sponsoring or recruiting others, that no product purchase is needed to become or remain a Brand Partner, and that the enrollment fee is $25 with a $25 annual renewal fee. Headline figures, exactly as the document states them: 21% of registered and active Brand Partners received a commission payment from LifeWave in at least one month of 2024; 34% of Brand Partners did not earn any compensation during the year because they were not active (the document defines an active Brand Partner as one who purchased products, sponsored another Brand Partner, or earned commissions during 2024); and the average earnings for all U.S. Brand Partners who were active at any time during 2024 was $651 before expenses. The document's own table breaks 2024 annual income down by rank, showing for each rank its share of all Brand Partners and of active Brand Partners, and the high, average, low and median annual income for all Brand Partners and for active Brand Partners, plus the average months taken to achieve the rank. The distribution is concentrated at the entry rank: Brand Partner accounts for 94.41% of all Brand Partners (average $23, median $0), Manager 4.67% (average $1,368, median $655), and Director 0.74% (average $8,108, median $4,608); each higher rank is under 0.1% of all Brand Partners, up to Senior Presidential Director at 0.05% (average $491,345, median $235,005, as the document states them). Its own caveats: success varies with factors including customer base, networking skills, business experience, effort, persistence and the size and quality of a sales organization, and operating expenses vary widely - the document says they can be several hundred or several thousand dollars a year (for example promotion, samples, training, travel, phone, internet and equipment) and should be factored in when projecting profits. These figures are the company's disclosure for 2024; they are not promises, not typical-result advertising, and not a guarantee that any individual will earn any amount. Standing rule (US Policies & Procedures, Appendix A.3, effective December 1, 2023): a copy of the EDS must be presented to all prospective Brand Partners, and made available any time the compensation plan is presented or discussed or any earnings or lifestyle claim is made, and at any public meeting where the plan or income claims come up; failure to comply is a significant and material breach. Copies may be printed or downloaded free from the corporate website. Practical rule: no earnings claim without the EDS alongside it, and any figure quoted must come from the EDS itself (see also biz-pnp-income-claims).",
+   "claim_label": "official fact",
+   "id": "biz-earnings-disclosure",
+   "source_ref": "LifeWave Back Office — 2024 U.S. Earnings Disclosure Statement (2024_LW_Earnings_Disclosure_Statement.pdf), 2024 edition — the only edition posted in the LifeWave Back Office (checked 2026-10-17); rule also in US Policies & Procedures, Appendix A.3, effective December 1, 2023",
+   "source_type": "official-site",
+   "title": "Earnings Disclosure Statement (2024 edition) - what it says and the rule for income talk",
+   "topic": "business",
+   "updated": "2026-10-17"
+  },
+  {
+   "audience": "public",
+   "body": "Update, 2026-10-17: the current US compensation plan has now been obtained from the official Brand Partner Back Office. It is the US Compensation Plan document LW0052-R02, presenting Compensation Plan 2.0 (copyright 2026 LifeWave, Inc. in the document), and its mechanics are summarized in this topic in the biz-comp-* entries. The public website still does not post the plan - the public store pages carry no plan detail - so the Back Office remains where Brand Partners get the authoritative document. History: an older official bonus summary on the company's secure site (document COMP-PLAN-BONUS-EN R02) describes binary cycle pay and matching bonuses under a 60% payout cap, but it predates Compensation Plan 2.0 and its figures should not be quoted as current. The safe practice stands: present the plan only from the current official plan document, together with the Earnings Disclosure Statement. Update, 2026-10-17: the Earnings Disclosure Statement the plan points to has also been obtained from the Back Office - it is the 2024 edition, the only edition posted there (checked 2026-10-17) - and its contents are summarized in biz-earnings-disclosure.",
+   "claim_label": "official fact",
+   "id": "biz-comp-plan-documents",
+   "source_ref": "LifeWave Back Office — US Compensation Plan, LW0052-R02 (Compensation Plan 2.0), retrieved 2026-10-17",
+   "source_type": "official-site",
+   "title": "Where the official compensation plan lives - and a staleness warning",
+   "topic": "business",
+   "updated": "2026-10-17"
+  },
+  {
+   "audience": "public",
+   "body": "LifeWave's current US compensation plan is Compensation Plan 2.0, set out in the official US Compensation Plan document LW0052-R02 obtained from the Brand Partner Back Office on 2026-10-17. In its own framing, the plan combines customer earnings, weekly primary bonuses and milestone-based additional opportunities, organized around a step-by-step 'Success Pathway' of ranks from Brand Partner up to Presidential. The plan is calculated on a weekly commission cycle (Monday 12:00 AM to Sunday 11:59 PM US Central Time), paid ranks are calculated weekly, and volume qualifications are measured over a rolling 31-day period. The document states that plan components may vary by market, that LifeWave may modify the plan with a minimum of 30 days' notice, and that amounts are calculated in USD and converted for payout in applicable markets. The plan document contains worked dollar examples, which it labels as illustrative only. Earnings vary by individual effort, skill and market conditions, the company does not guarantee any Brand Partner will earn specific amounts, and any presentation of the plan or any earnings claim must be accompanied by the official Earnings Disclosure Statement (see biz-earnings-disclosure) - the plan document itself directs readers to the Earnings Disclosure Statement in the Back Office.",
+   "claim_label": "official fact",
+   "id": "biz-comp-overview",
+   "source_ref": "LifeWave Back Office — US Compensation Plan, LW0052-R02 (Compensation Plan 2.0), retrieved 2026-10-17",
+   "source_type": "official-site",
+   "title": "Compensation Plan 2.0 - overview (official US plan, LW0052-R02)",
+   "topic": "business",
+   "updated": "2026-10-17"
+  },
+  {
+   "audience": "public",
+   "body": "The plan lists nine earning opportunities, in this order: (1) Retail Profit, (2) Customer Premiums, (3) Product Introduction Bonus, (4) Level Earnings Bonus, (5) Binary Bonus, (6) Mentor Matching Bonus, (7) Business Launch Bonus, (8) Breakthrough Incentive, and (9) Quarterly Leadership Pool. The first two are customer earnings - rewards tied to sales to a Brand Partner's personally enrolled Customers. The Product Introduction, Level Earnings, Binary and Mentor Matching bonuses are the plan's four Primary Bonuses, calculated and paid weekly. The Business Launch Bonus, Breakthrough Incentive and Quarterly Leadership Pool are additional opportunities tied to specific stages and milestones: a new Brand Partner's first weeks, first reaching higher leadership ranks, and Presidential-level leadership respectively. Each method has its own entry in this topic; being listed here is a description of the plan's structure, not a promise that any individual will earn under any of them.",
+   "claim_label": "official fact",
+   "id": "biz-comp-ways-to-earn",
+   "source_ref": "LifeWave Back Office — US Compensation Plan, LW0052-R02 (Compensation Plan 2.0) and Ways to Earn summary (LW_CompPlan_Ways_to_Earn_US_EN.pdf), retrieved 2026-10-17",
+   "source_type": "official-site",
+   "title": "Nine ways to earn - the plan's earning methods (official)",
+   "topic": "business",
+   "updated": "2026-10-17"
+  },
+  {
+   "audience": "public",
+   "body": "The plan rewards sales to personally enrolled Customers in two ways, both calculated and paid weekly. Retail Profit is earned on every product sale to a personally enrolled Customer; the amount varies by customer type (Retail or Preferred) and product, with per-product amounts set out in the plan's official Product Pricing list (for example, the difference between the retail and Preferred/Brand Partner prices on a product). Customer Premiums are an additional percentage paid on the Qualifying Volume (QV) of personally enrolled Customers' orders in the current week, once the Brand Partner reaches a minimum Customer QV over the rolling 31-day period: the plan pays 5% at 300-599 Customer QV, 10% at 600-1,199, and 20% at 1,200 or more. Personal purchases are excluded from the Customer Premium - it is calculated only on Customer orders. These percentages are the plan's stated mechanics, not typical or guaranteed results.",
+   "claim_label": "official fact",
+   "id": "biz-comp-customer-earnings",
+   "source_ref": "LifeWave Back Office — US Compensation Plan, LW0052-R02 (Compensation Plan 2.0), retrieved 2026-10-17",
+   "source_type": "official-site",
+   "title": "Customer earnings - Retail Profit and Customer Premiums (official plan mechanics)",
+   "topic": "business",
+   "updated": "2026-10-17"
+  },
+  {
+   "audience": "public",
+   "body": "The Product Introduction Bonus is a weekly Primary Bonus paid to an Active Brand Partner who enrolls a new Brand Partner who purchases an enrollment pack. Active means at least 55 Personal Volume (PV) in the rolling 31-day period in the week of the new member's pack purchase. Under the current US plan the packs and the bonus paid to the enroller are: Starter, $25, no qualifying volume, no bonus; Core, $295 (180 QV), $35 bonus; Advanced, $535 (300 QV), $75 bonus; Advanced Plus, $975 (500 QV), $165 bonus; and Premium, $1,750 (775 QV, spread across the purchase month and the two following months), $405 bonus. Pack sleeve counts are the lower figure for X39/X49 sleeves and the higher figure for other patches (Core 3 or 6 sleeves, Advanced 6 or 12, Advanced Plus 11 or 22, Premium 20 or 40). These are the plan's stated pack prices and bonus amounts at the document's revision, not earnings representations.",
+   "claim_label": "official fact",
+   "id": "biz-comp-product-introduction-bonus",
+   "source_ref": "LifeWave Back Office — US Compensation Plan, LW0052-R02 (Compensation Plan 2.0), retrieved 2026-10-17",
+   "source_type": "official-site",
+   "title": "Product Introduction Bonus (PIB) - enrollment pack bonus (official plan mechanics)",
+   "topic": "business",
+   "updated": "2026-10-17"
+  },
+  {
+   "audience": "public",
+   "body": "The Level Earnings Bonus is a weekly Primary Bonus paid on Bonus Volume (BV) from purchases by Brand Partners and sales to Customers in a Brand Partner's Enrollment Tree, down to a maximum of three levels. The Brand Partner must be Active (at least 55 PV in the rolling 31-day period) in the commission week, and a team member with 0 PV in the week does not count as a level for this calculation. How much is paid, and on how many levels, rises with weekly Paid Rank: at Level 1 the plan pays from 3% for an Active Brand Partner up to 7% from 2-Star Manager upward; Level 2 opens at 2-Star Manager (2%) and rises to 5% from 1-Star Director upward; Level 3 opens at 1-Star Director (1%) and rises to 3% at 3-Star Director and above. These percentages are the plan's stated mechanics for a given week's Paid Rank, not typical or guaranteed results.",
+   "claim_label": "official fact",
+   "id": "biz-comp-level-earnings",
+   "source_ref": "LifeWave Back Office — US Compensation Plan, LW0052-R02 (Compensation Plan 2.0), retrieved 2026-10-17",
+   "source_type": "official-site",
+   "title": "Level Earnings Bonus - up to three levels (official plan mechanics)",
+   "topic": "business",
+   "updated": "2026-10-17"
+  },
+  {
+   "audience": "public",
+   "body": "The Binary Bonus is a weekly Primary Bonus paid on sales volume in a Brand Partner's Binary Tree - a team structure with at most two positions directly under each account (left and right legs). To qualify, a Brand Partner must be paid as 3-Star Manager or higher in the commission week and have at least 300 Bonus Volume (BV) in the Binary Pay Leg (the leg with less volume that week). The plan pays a percentage of the Pay Leg BV by Paid Rank - 5% at 3-Star Manager, 7% at 1-Star Director, 9% at 2-Star Director, and 10% at 3-Star Director and above - subject to a weekly maximum per rank, from $1,500 at 3-Star Manager up to $25,000 at the top Presidential ranks. Two caps apply in order: the rank's weekly maximum first, then a company-wide cap that limits total Binary Bonus payouts to 27% of total Bonus Volume across all Brand Partners, with proportional adjustment if the cap is exceeded. When the bonus is paid, the Pay Leg BV amount is consumed from both legs. Unused Pay Leg volume carries forward up to 24 weeks and Power Leg volume up to 52 weeks before it flushes, and losing Active status (at least 55 PV in a rolling 31-day period) flushes all accumulated volume in both legs. These are the plan's stated mechanics and limits, not earnings representations.",
+   "claim_label": "official fact",
+   "id": "biz-comp-binary-bonus",
+   "source_ref": "LifeWave Back Office — US Compensation Plan, LW0052-R02 (Compensation Plan 2.0), retrieved 2026-10-17",
+   "source_type": "official-site",
+   "title": "Binary Bonus - mechanics and caps (official plan)",
+   "topic": "business",
+   "updated": "2026-10-17"
+  },
+  {
+   "audience": "public",
+   "body": "The Mentor Matching Bonus is a weekly Primary Bonus that pays a percentage match on the Binary Bonus and Level Earnings Bonus earned by eligible Generations of Brand Partners in a Brand Partner's enrollment Lines of Sponsorship. A Generation, for this bonus, runs down to the next Brand Partner ranked 1-Star Director or higher. To qualify, the earner must be paid as 1-Star Director or higher in the commission week. The match percentage and the number of Generations paid both rise with Paid Rank: the first-Generation match is 5% at 1-Star Director and rises by rank to 20% at Presidential ranks, and higher ranks are paid on more Generations, up to six at the top Presidential ranks. Each individual match is capped per person matched, from $500 at 1-Star Director up to $20,000 at 3-Star Presidential, and a company-wide cap limits the total weekly Mentor Matching pool to 14% of total Bonus Volume, with proportional adjustment if it is exceeded. These are the plan's stated mechanics and limits, not earnings representations.",
+   "claim_label": "official fact",
+   "id": "biz-comp-mentor-matching",
+   "source_ref": "LifeWave Back Office — US Compensation Plan, LW0052-R02 (Compensation Plan 2.0), retrieved 2026-10-17",
+   "source_type": "official-site",
+   "title": "Mentor Matching Bonus - matching Generations of leaders (official plan mechanics)",
+   "topic": "business",
+   "updated": "2026-10-17"
+  },
+  {
+   "audience": "public",
+   "body": "Rank in Compensation Plan 2.0 follows the Success Pathway: Brand Partner, then Active Brand Partner, then Manager (1-Star, 2-Star, 3-Star), Director (1-Star to 3-Star), Executive (1-Star to 3-Star) and Presidential (1-Star to 3-Star). Qualification combines Personal Volume (PV) with Qualified Downline Volume (QDV) - the Qualifying Volume from the Brand Partner's whole Enrollment Tree over a rolling 31-day period. In the plan's Success Pathway table, Active status takes 55 PV; Manager ranks take 75 PV with QDV from 750 (1-Star) to 2,500 (3-Star); Director ranks take 110 PV with QDV from 5,000 to 20,000; and Executive and Presidential ranks take 200 PV with QDV from 40,000 up to 3,500,000 at 3-Star Presidential. Higher ranks add structural requirements on top of volume: minimum Volume Legs (enrollment legs meeting a set downline volume), volume from outside the largest leg or legs, and Binary Balancing (minimum volume on both sides of the binary organization). For 1-Star Director and above, no more than 65% of the required QDV may come from a single line of business. Paid Rank is calculated weekly; the rank a Brand Partner is paid at in a week determines which bonuses they are eligible for and at what rates that week.",
+   "claim_label": "official fact",
+   "id": "biz-comp-ranks-qualifications",
+   "source_ref": "LifeWave Back Office — US Compensation Plan, LW0052-R02 (Compensation Plan 2.0), retrieved 2026-10-17",
+   "source_type": "official-site",
+   "title": "Success Pathway ranks and qualification concepts (official plan)",
+   "topic": "business",
+   "updated": "2026-10-17"
+  },
+  {
+   "audience": "public",
+   "body": "The plan runs on three volume measures, defined in its glossary. Qualifying Volume (QV) is the volume attached to product purchases, currency-neutral and the same across customer types; it is the basis for rank qualification. Bonus Volume (BV) is the volume attached to product sales used as the basis for calculating bonuses. Personal Volume (PV) is the combined QV from a Brand Partner's own purchases and sales to their personally enrolled Customers over a rolling 31-day period. Two maintenance rules matter most: a Brand Partner is Active with at least 55 PV in the rolling 31-day period - Active status is required for bonuses such as the Product Introduction and Level Earnings bonuses, and losing it flushes accumulated binary volume - and at most 110 QV from personal purchases may count toward a PV requirement, so any PV requirement above 110 must be met from sales to personally enrolled Customers. Qualified Downline Volume (QDV) and Total Downline Volume extend the same QV counting to the Brand Partner's entire Enrollment Tree over the rolling 31-day period.",
+   "claim_label": "official fact",
+   "id": "biz-comp-volume-concepts",
+   "source_ref": "LifeWave Back Office — US Compensation Plan, LW0052-R02 (Compensation Plan 2.0), retrieved 2026-10-17",
+   "source_type": "official-site",
+   "title": "Volume concepts - PV, QV, BV and Active status (official plan glossary)",
+   "topic": "business",
+   "updated": "2026-10-17"
+  },
+  {
+   "audience": "public",
+   "body": "Beyond the Primary Bonuses, the plan has three milestone-based opportunities. The Business Launch Bonus covers a new Brand Partner's first nine weeks (the join week plus eight): in each week the new Brand Partner is paid as 1-Star Manager they earn $25, or $50 at 2-Star Manager or higher, and their enroller earns a matching bonus of half that amount ($12.50 or $25) when the enroller's Paid Rank meets the stated condition. The Breakthrough Incentive pays a one-time award the first time a Brand Partner is paid at a new leadership rank, in two equal parts - the second part after four additional weeks paid at that rank or higher within 52 weeks: the total award is $500 at 1-Star Director, $5,000 at 1-Star Executive, and $50,000, $75,000 and $100,000 at 1-Star, 2-Star and 3-Star Presidential respectively. The Quarterly Leadership Pool lets qualifying Presidential-level leaders earn shares in a quarterly pool based on a percentage of the company's total Bonus Volume for the quarter; eligibility is set in the prior quarter and shares are earned weekly in the pay quarter for Total Downline Volume growth and for qualifying enrollment legs. These award amounts are the plan's stated terms for meeting the stated conditions, not typical or guaranteed results.",
+   "claim_label": "official fact",
+   "id": "biz-comp-additional-opportunities",
+   "source_ref": "LifeWave Back Office — US Compensation Plan, LW0052-R02 (Compensation Plan 2.0), retrieved 2026-10-17",
+   "source_type": "official-site",
+   "title": "Additional opportunities - Business Launch, Breakthrough, Leadership Pool (official plan mechanics)",
+   "topic": "business",
+   "updated": "2026-10-17"
+  },
+  {
+   "audience": "public",
+   "body": "The US Policies & Procedures (effective December 1, 2023; this document revised April 29, 2024) is one part of the Brand Partner Agreement. In its own framing, the Agreement as a whole - the Policies & Procedures, the Compensation Plan, and the Application including its Terms and Conditions, as amended from time to time - is the complete and binding contract between a Brand Partner and LifeWave, and each Brand Partner is responsible for reading, understanding and operating under the most current version. The document defines the relationship between LifeWave and its Brand Partners, between Brand Partners and their Customers, and among Brand Partners in the network. It is written as a global document, with country appendices (Appendix A for the United States) that adapt it to local law and practice. The term is one year from enrollment, renewable each year on payment of the annual renewal fee and reaffirmation of the current Agreement in the Back Office; an account inactive for twelve consecutive months (no purchases, sponsoring or commissions) may be terminated. Sections cover enrollment and account management, Brand Partner responsibilities and business practices, sponsoring, ordering, advertising, compensation, resignation and termination, plus US appendices on returns/refunds/exchanges and on authorized product and earnings claims. This topic summarizes only the parts most useful to app users, in our own words - it is a reference summary, not a reproduction of the legal document.",
+   "claim_label": "official fact",
+   "id": "biz-pnp-overview",
+   "source_ref": "LifeWave Back Office — US Policies & Procedures (PnP_US_EN_29Apr2024.pdf), effective December 1, 2023 (revised April 29, 2024), §§1.1-1.6, 3.15",
+   "source_type": "official-site",
+   "title": "US Policies & Procedures - overview: what it governs and who it binds (effective Dec 1, 2023)",
+   "topic": "business",
+   "updated": "2026-10-17"
+  },
+  {
+   "audience": "public",
+   "body": "Under the Policies & Procedures (§§1.8, 4.3 and US Appendix A.1, effective December 1, 2023), a Brand Partner is an independent contractor - not an employee, partner, legal representative, agent or franchisee of LifeWave. The Brand Partner is solely responsible for the expenses of running their own business (for example travel, food, lodging, office and phone costs) and is not treated as an employee for federal or state tax purposes: LifeWave does not withhold FICA or taxes of any kind from bonuses and commissions. Each Brand Partner is responsible for their own personal income taxes and applicable sales taxes; the company provides an IRS Form 1099-MISC / 1099-NEC for a year in which a Brand Partner had earnings over $600 (Appendix A.5). Appendix C reinforces the language rule that follows from this status: describe the role as 'independent contractor' or 'independent Brand Partner', and do not use employment terms such as 'employment opportunity', 'employer' or 'job' for it.",
+   "claim_label": "official fact",
+   "id": "biz-pnp-independent-contractor",
+   "source_ref": "LifeWave Back Office — US Policies & Procedures (PnP_US_EN_29Apr2024.pdf), effective December 1, 2023 (revised April 29, 2024), §§1.8, 4.3, Appendices A.1, A.5, C.2",
+   "source_type": "official-site",
+   "title": "Independent contractor status - no employment relationship (Policies & Procedures)",
+   "topic": "business",
+   "updated": "2026-10-17"
+  },
+  {
+   "audience": "public",
+   "body": "The Policies & Procedures (§4.8, effective December 1, 2023) draw the product-claim line plainly. A Brand Partner must not make any statement claiming LifeWave products will diagnose, treat, cure, prevent or mitigate disease, and must not make any unauthorized representation about LifeWave or its products. The only product claims a Brand Partner may make are those in the official LifeWave literature approved for their country - Appendix C points to the company's authorized-claims guidance for the US as the list to stay within. The document also notes products are not approved for use by persons under 18 unless otherwise directed by a licensed health care practitioner. A Brand Partner is fully responsible for their own verbal and written statements about the products, services and Compensation Plan that go beyond official company materials, and agrees to indemnify the company for claims and expenses arising from such out-of-scope representations; that responsibility survives termination. Related conduct rules in the same document: do not claim any regulatory or governmental agency approves, sponsors or endorses the Compensation Plan or any product (§4.10), and do not contact hospitals, medical clinics or their medical professionals to sell or enroll except where a prior professional relationship exists (§4.5).",
+   "claim_label": "official fact",
+   "id": "biz-pnp-product-claims",
+   "source_ref": "LifeWave Back Office — US Policies & Procedures (PnP_US_EN_29Apr2024.pdf), effective December 1, 2023 (revised April 29, 2024), §§4.5, 4.8, 4.10, Appendix C.1",
+   "source_type": "official-site",
+   "title": "Product claims rules - no disease claims, official literature only (Policies & Procedures §4.8, Appendix C)",
+   "topic": "business",
+   "updated": "2026-10-17"
+  },
+  {
+   "audience": "public",
+   "body": "Under §4.9 of the Policies & Procedures (effective December 1, 2023), claims made when promoting the business must be truthful and not misleading - the document notes a Brand Partner's own success may be significant but may not be typical of the majority. 'Earnings claim' is defined broadly: statements of actual, projected or ranged earnings, income testimonials, lifestyle claims (including pictures suggesting wealth, such as large homes, luxury cars or exotic vacations, and 'achieve your dreams' framing), and hypothetical claims. The prohibitions are explicit: no express or implied income or lifestyle claims to prospective or current Brand Partners; do not display commission payments (checks/amounts) or make specific income claims when recruiting; and do not post images of cash awards to promote the opportunity. Appendix C narrows what may be said to the Earnings Disclosure Statement itself: typical earnings and typical earnings ranges as stated in the EDS are the only income representation permitted, hypothetical earnings claims are prohibited, and terms such as 'financial freedom', 'earn millions', 'retire', 'passive income' and 'investment' are to be avoided in favor of terms like 'earnings opportunity' and 'supplemental income'. Appendix A.3 adds the delivery rule: the EDS must be presented to all prospective Brand Partners and made available any time the plan is presented or discussed or any earnings or lifestyle claim is made (see biz-earnings-disclosure for the 2024 edition's contents); non-compliance is a significant and material breach. Separately, §8.3 states no Brand Partner is guaranteed a specific income or assured any level of sales, profit or success.",
+   "claim_label": "official fact",
+   "id": "biz-pnp-income-claims",
+   "source_ref": "LifeWave Back Office — US Policies & Procedures (PnP_US_EN_29Apr2024.pdf), effective December 1, 2023 (revised April 29, 2024), §§4.9, 8.3, Appendices A.3, C.2",
+   "source_type": "official-site",
+   "title": "Income, lifestyle and opportunity claims - and the EDS rule (Policies & Procedures §4.9, Appendices A.3 & C)",
+   "topic": "business",
+   "updated": "2026-10-17"
+  },
+  {
+   "audience": "public",
+   "body": "Advertising rules in the Policies & Procedures (effective December 1, 2023), in summary. Generally a Brand Partner may only use approved content - images, product descriptions and resources provided by the company (§7.1) - and any permitted advertising must prominently display the phrase and logo 'LifeWave Independent Brand Partner'; a team or group name must never be used instead of the official LifeWave branding (§7.1.3). Trademarks and other intellectual property (§4.12) may not be used to promote a Brand Partner's business without the company's consent and written approval, may not be registered or claimed by a Brand Partner, and may not be built into domain names, email addresses, team names, tag lines or social-media pages - §7.4 likewise prohibits registering or using company trade names, trademarks, product names or derivatives as URLs, email addresses, webpages or blogs. Internet selling is channeled: the replicated website LifeWave provides is the website for advertising and selling online; a Brand Partner's own website needs a prior website agreement and Member Success approval before it goes live, and no private shopping cart may sell products (§7.2). Other online shopping carts are strictly prohibited, as is selling on unauthorized online retail or classifieds platforms - the document names examples including Amazon, eBay, Facebook, Taobao, Mercado Libre, Alibaba, Shopee and Craigslist (§7.4) - and cross-branding LifeWave with other companies or products online is not allowed. Electronic and mass-media advertising (TV, radio, newspapers, email and similar, including search-engine ads, pay-per-click and SEO tactics aimed at outranking the official site) requires prior written permission (§7.3), and unsolicited bulk email, text or other spam-type marketing is strictly prohibited (§7.4). Social media (§7.5): the account must prominently show 'Independent Brand Partner' and must not imply it is an official corporate account; personal testimonials posted must clearly identify the Brand Partner's financial interest, may only present typical experiences, and must stay within the Appendix C claim limits; no product sales or enrollments may occur on a social-media site itself - it must link only to the Brand Partner's replicated website; and confidential company information (for example corporate webinars, calls and leadership emails) may not be posted.",
+   "claim_label": "official fact",
+   "id": "biz-pnp-advertising-social",
+   "source_ref": "LifeWave Back Office — US Policies & Procedures (PnP_US_EN_29Apr2024.pdf), effective December 1, 2023 (revised April 29, 2024), §§4.12, 7.1-7.5",
+   "source_type": "official-site",
+   "title": "Advertising, trademarks, internet and social media rules (Policies & Procedures §§4.12, 7)",
+   "topic": "business",
+   "updated": "2026-10-17"
+  },
+  {
+   "audience": "public",
+   "body": "Selling rules from the Policies & Procedures (effective December 1, 2023), at summary level. Sales are to end-user Customers only, in quantities an individual can reasonably use personally; selling or transferring products to anyone for resale (including wholesalers and drop-shippers) without prior written consent is prohibited (§§4.16, 6.1). At presentations a Brand Partner must truthfully identify themselves, the products and the purpose of their business, must not use misleading or unfair practices, and must stop a presentation when a consumer asks (§4.14). Pricing: a Brand Partner is strictly prohibited from selling, or discounting so as to sell, below the wholesale pricing established by the company (§4.17). Inventory: no Brand Partner is required to purchase or carry inventory, and stockpiling is discouraged - but under the Seventy Percent Rule (§6.1.3), of the products a Brand Partner does buy, they must personally sell, consume or use for business building at least 70% of every order before placing another order, and must be able to validate that if the company or an agency asks. Products must be sold in original packaging - no relabeling, repackaging, altering labels or lot/batch codes, and opening a package to sell individual patches is prohibited (§6.5). Channels: retail establishments and online marketplaces are prohibited channels; service establishments (for example gyms, salons and professional offices, not large chains) may be approved by Member Success under stated conditions, with sales receipts and the refund policy applying (§4.18). Returns and refunds (US Appendix B, summary only - the appendix table controls): a Customer's initial order carries the 90-day money-back guarantee at 100% of purchase price and tax; subsequent Customer orders are refundable at 100% up to 30 days and up to 90% between 31 and 365 days, in marketable condition; Brand Partner orders follow the 100%-to-30-days / up-to-90%-to-365-days pattern, and resigning Brand Partners may return marketable products and sales tools for 90% within 365 days. Returns need an RMA number from Customer Service first, are shipped at the buyer's cost, and damaged or defective products follow a separate replacement route with prompt notification deadlines in the appendix.",
+   "claim_label": "official fact",
+   "id": "biz-pnp-selling-returns",
+   "source_ref": "LifeWave Back Office — US Policies & Procedures (PnP_US_EN_29Apr2024.pdf), effective December 1, 2023 (revised April 29, 2024), §§4.14-4.18, 6.1.3, 6.5.1, Appendix B",
+   "source_type": "official-site",
+   "title": "Selling rules, the 70% rule, pricing and returns (Policies & Procedures §§4.14-4.18, 6.1, Appendix B)",
+   "topic": "business",
+   "updated": "2026-10-17"
+  },
+  {
+   "audience": "public",
+   "body": "Conduct rules in the Policies & Procedures (effective December 1, 2023), kept at summary level. The Code of Ethics (§1.5) requires fairness, tolerance and respect regardless of race, gender, age, class, nationality or religion; resolving disagreements with tact and goodwill; honesty - no disparaging, untrue or misleading statements about LifeWave, its people, products, plan, other Brand Partners or competitors; compliance with applicable laws; and reporting improper conduct, normally through the upline or in writing to the Member Success / compliance addresses given in the document. Unfair competition (§4.7) prohibits, during the Agreement, cross-sponsoring (enrolling a Brand Partner or Customer into another direct-selling or network-marketing opportunity), line switching, and enticement of another Brand Partner or Customer toward either, including through fictitious identities; for twelve months after termination a former Brand Partner must not recruit LifeWave Brand Partners or Customers into another direct-selling company. Targeting another direct-selling company's sales force is likewise not condoned (§5.6). A Brand Partner who also works another direct-selling business must keep the two completely separate - separate venues and completely separate social-media accounts, and no recruiting LifeWave contacts into the other business (§4.6). Confidentiality (§4.13): Back Office lists and reports of Brand Partners and Customers, and other company confidential information, are the company's proprietary trade secrets - held in strict confidence, used only to work the Brand Partner's own LifeWave business, never disclosed to third parties, never used to compete or recruit, and returned on demand or on termination. Discipline (§9): the company generally starts with education, and may escalate to suspension (with commissions held and purchasing paused) and termination for breach; serious breaches named in the document include cross-sponsoring, line switching, enticement, non-solicitation breaches and product or opportunity claims made in breach of §§4.8-4.9. On termination a Brand Partner loses the account, tree positions and future commissions, must stop representing themselves as a Brand Partner and stop selling, and is subject to the six-month waiting rule (§3.14) before reapplying. This entry is a high-level reference summary only - the document's own procedures, notice and appeal steps control in any real case.",
+   "claim_label": "official fact",
+   "id": "biz-pnp-conduct-discipline",
+   "source_ref": "LifeWave Back Office — US Policies & Procedures (PnP_US_EN_29Apr2024.pdf), effective December 1, 2023 (revised April 29, 2024), §§1.5, 3.14, 4.6, 4.7, 4.13, 5.6, 9.4-9.5",
+   "source_type": "official-site",
+   "title": "Conduct, sponsoring ethics, confidentiality and discipline (Policies & Procedures §§1.5, 4, 5, 9)",
+   "topic": "business",
+   "updated": "2026-10-17"
+  }
+ ],
+ "note": "Business basics and Compensation Plan 2.0 mechanics from official LifeWave sources only (official enrollment document, official product/opportunity pages, and - from 2026-10-17 - the official US Compensation Plan LW0052-R02, Ways to Earn summary, US Policies & Procedures effective December 1, 2023, and the 2024 U.S. Earnings Disclosure Statement, all obtained from the Brand Partner Back Office). Plan and policy material is summarized in our own words as stated terms; it is not an earnings representation. Earnings figures appear only in biz-earnings-disclosure, summarized as the 2024 edition of the official Earnings Disclosure Statement states them (2024 edition - the only edition posted in the Back Office, checked 2026-10-17).",
+ "topic": "business"
+}

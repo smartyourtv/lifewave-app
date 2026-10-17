@@ -1,0 +1,72 @@
+{
+ "app": "Lifewave AI",
+ "counts": {
+  "business": 22,
+  "company": 3,
+  "faq": 13,
+  "group-pointers": 5,
+  "phototherapy": 3,
+  "playbook": 12,
+  "products": 26,
+  "testimonials": 2,
+  "total": 95,
+  "usage": 9
+ },
+ "db_version": 5,
+ "files": [
+  {
+   "entries": 26,
+   "path": "products/products.json",
+   "topic": "products"
+  },
+  {
+   "entries": 13,
+   "path": "faq/faq.json",
+   "topic": "faq"
+  },
+  {
+   "entries": 12,
+   "path": "playbook/playbook.json",
+   "topic": "playbook"
+  },
+  {
+   "entries": 9,
+   "path": "usage/usage.json",
+   "topic": "usage"
+  },
+  {
+   "entries": 22,
+   "path": "business/business.json",
+   "topic": "business"
+  },
+  {
+   "entries": 5,
+   "path": "pointers/pointers.json",
+   "topic": "group-pointers"
+  },
+  {
+   "entries": 3,
+   "path": "company/company.json",
+   "topic": "company"
+  },
+  {
+   "entries": 3,
+   "path": "phototherapy/phototherapy.json",
+   "topic": "phototherapy"
+  },
+  {
+   "entries": 2,
+   "path": "testimonials/testimonials.json",
+   "topic": "testimonials"
+  }
+ ],
+ "generated": "2026-10-17",
+ "owner_neutral": true,
+ "queued_topics": [],
+ "rules": {
+  "audience": "public on every entry - single owner-neutral edition",
+  "claims": "every health/product claim carries claim_label: official fact | distributor claim",
+  "group_content": "summaries in our own words only; group protocols/internal material appear as pointers only, never content",
+  "personalization": "none baked in; any user name/preferences are set by each user on their own device"
+ }
+}

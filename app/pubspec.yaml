@@ -1,0 +1,65 @@
+name: lifewave_app
+description: "LifeWave AI — an independent Brand Partner tool: offline product knowledge, catalog and chat Q&A grounded in the bundled database."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: 3.5.4
+
+# Dependencies are PINNED to exact versions (no floating ranges, no "any") —
+# PRE-BUILD-AUDIT §6 rule. Versions chosen to resolve against the pinned
+# toolchain: Flutter 3.24.5 / Dart 3.5.4.
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: 1.0.8
+  flutter_svg: 2.0.14
+  url_launcher: 6.3.1
+  shared_preferences: 2.3.3
+  speech_to_text: 7.0.0
+  flutter_tts: 4.2.2
+  permission_handler: 11.3.1
+  path_provider: 2.1.5
+  http: 1.2.2
+  google_mlkit_translation: 0.13.0
+  google_mlkit_language_id: 0.13.0
+  share_plus: 10.1.4
+  flutter_local_notifications: 17.2.4
+  flutter_timezone: 3.0.1
+  timezone: 0.9.4
+  qr_flutter: 4.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: 4.0.0
+  flutter_launcher_icons: 0.14.2
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
+    - assets/db/
+    - assets/db/business/
+    - assets/db/company/
+    - assets/db/faq/
+    - assets/db/phototherapy/
+    - assets/db/playbook/
+    - assets/db/pointers/
+    - assets/db/products/
+    - assets/db/testimonials/
+    - assets/db/usage/
+    - assets/brand/
+
+# Launcher icons are generated from the OFFICIAL LifeWave logo artwork
+# (assets/brand/lifewave-logo.svg, provenance in ~/workspace/lifewave/ASSETS.md)
+# rasterized onto a light panel — never a redrawn logo. See tool/make_icon.py.
+flutter_launcher_icons:
+  android: true
+  image_path: "assets/icon/icon.png"
+  min_sdk_android: 21
+  adaptive_icon_background: "#ECF5FA"
+  adaptive_icon_foreground: "assets/icon/icon_foreground.png"
+  windows:
+    generate: true
+    icon_size: 256

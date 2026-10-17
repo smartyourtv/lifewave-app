@@ -1,0 +1,28 @@
+{
+ "entries": [
+  {
+   "audience": "public",
+   "body": "LifeWave publishes a list of approved customer testimonials on its official Brand Partner websites under 'Success Stories - From LifeWave's approved customer testimonials': named, dated, five-star reviews. The company's own notice on those pages says the testimonials are reproduced exactly as approved, with the name, star rating and date as submitted; that some testimonials come from Brand Partners who have a financial interest in promoting the product; and that individual results are not typical and will vary. Treat every testimonial as one person's experience - not proof a product works.",
+   "claim_label": "distributor claim",
+   "id": "test-approved-program",
+   "source_ref": "https://gazellevz.lifewavenow.app/ca2ecf",
+   "source_type": "official-site",
+   "title": "Company-approved testimonials - what they are (official pages)",
+   "topic": "testimonials",
+   "updated": "2026-10-17"
+  },
+  {
+   "audience": "public",
+   "body": "Examples from the company's approved-testimonials list for X39 (paraphrased; see the official page for the approved wording): Virginia Pope (April 2, 2026) says that at 75 she would not go a day without X39 and feels alive and vibrant. Antoinette Lee (February 23, 2026) says X39 fits easily into her adventure-sports lifestyle. Christine Dix (January 16, 2026) says she values how gentle and non-invasive the patch feels - no smell, no sensation - as a quiet daily support. Debra Waldrop (January 15, 2026) describes a gradual, natural-feeling sense of being more supported through the day. Beryl Quaye-Kumah (August 9, 2025) calls X39 a game changer and says she feels amazing. All are personal testimonials, labeled as such - not verified results.",
+   "claim_label": "distributor claim",
+   "id": "test-x39-examples",
+   "source_ref": "https://2480581.lifewavenow.app/05d48f7c12",
+   "source_type": "official-site",
+   "title": "Approved X39 testimonials - examples (paraphrased, labeled)",
+   "topic": "testimonials",
+   "updated": "2026-10-17"
+  }
+ ],
+ "note": "Only company-approved testimonials published on official LifeWave pages are recorded here, labeled as testimonials (distributor claim) - personal experiences, never evidence that a product treats any condition. Quotes are paraphrased in our words; the official pages carry the approved wording.",
+ "topic": "testimonials"
+}

@@ -1,0 +1,39 @@
+{
+ "entries": [
+  {
+   "audience": "public",
+   "body": "LifeWave is a health and wellness company founded in 2004 by inventor David Schmidt, its Founder and CEO. It sells patented, non-transdermal phototherapy patches plus related wellness lines (nutrition, skincare, and a light-infused water system), distributed through independent Brand Partners rather than ordinary retail stores. In the company's own framing, its 'life technology' harnesses the body's natural energy and enhances the ability to live well, and its mission is to improve health and extend lives around the world with wearable wellness technology.",
+   "claim_label": "official fact",
+   "id": "comp-story",
+   "source_ref": "https://www.lifewave.com/kruger/home/our-story",
+   "source_type": "official-site",
+   "title": "LifeWave - company story",
+   "topic": "company",
+   "updated": "2026-10-17"
+  },
+  {
+   "audience": "public",
+   "body": "Per the company's own bio: David Schmidt's background spans 30+ years in business and product development, with formal education in Management Information Systems and Biology at Pace University (Pleasantville, NY). Before LifeWave he owned companies in manufacturing and product development, including Advanced Applications Group, an R&D center for military and commercial energy-production technology (hydrogen/oxygen production methods, bladeless-turbine power systems, metal-combustion rocket engines). Work on emergency oxygen systems for General Dynamics and the U.S. Navy led to his invitation onto the Navy's next-generation mini-sub program. The company credits him with 200+ issued patents (70+ in regenerative science and technology) and inventions such as the Double Helix Conductor; he also received an honorary doctorate from the International Hall of Fame of Inventors.",
+   "claim_label": "official fact",
+   "id": "comp-founder",
+   "source_ref": "https://www.lifewave.com/kruger/home/our-story",
+   "source_type": "official-site",
+   "title": "David Schmidt - founder (company bio)",
+   "topic": "company",
+   "updated": "2026-10-17"
+  },
+  {
+   "audience": "public",
+   "body": "The company's account of its origin: Schmidt spent three years researching how to naturally increase energy and stamina by elevating fat burning, communicating with the body via phototherapy. Separately, the U.S. Navy needed a way to help mini-sub crews stay awake and energized without drugs or stimulants, and Schmidt joined that research effort. The patch he developed to increase energy in the body using phototherapy became the first LifeWave prototype - the Energy Enhancer patch - and the basis of the company.",
+   "claim_label": "official fact",
+   "id": "comp-origin",
+   "source_ref": "https://lifewave.com/mcarson/home/the-science",
+   "source_type": "official-site",
+   "title": "How LifeWave started - the Navy research origin (company account)",
+   "topic": "company",
+   "updated": "2026-10-17"
+  }
+ ],
+ "note": "Company story and founder facts from official LifeWave pages (Our Story / The Science), summarized in our words. Company benefit and mission language is the company's own framing, attributed as such - never stated as verified fact.",
+ "topic": "company"
+}

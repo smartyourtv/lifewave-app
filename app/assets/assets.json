@@ -1,0 +1,31 @@
+{
+ "logo": "brand/lifewave-logo.svg",
+ "products": {
+  "prod-x39": "brand/prod-x39.webp",
+  "prod-x49": "brand/prod-x49.webp",
+  "prod-performance-bundle": "brand/prod-performance-bundle.webp",
+  "prod-x2o": "brand/prod-x2o.webp",
+  "prod-x2o-filter-bundle": "brand/prod-x2o-filter-bundle.webp",
+  "prod-x2o-primary-filter": "brand/prod-x2o-primary-filter.webp",
+  "prod-x2o-secondary-filter": "brand/prod-x2o-secondary-filter.webp",
+  "prod-cellular-performance-system": "brand/prod-cellular-performance-system.webp",
+  "prod-cellergize-morning": "brand/prod-cellergize-morning.webp",
+  "prod-cellergize-evening": "brand/prod-cellergize-evening.webp",
+  "prod-cellergize-duo": "brand/prod-cellergize-duo.webp",
+  "prod-aeon": "brand/prod-aeon.webp",
+  "prod-glutathione": "brand/prod-glutathione.webp",
+  "prod-carnosine": "brand/prod-carnosine.webp",
+  "prod-yage-system-kit": "brand/prod-yage-system-kit.webp",
+  "prod-icewave": "brand/prod-icewave.webp",
+  "prod-energy-enhancer": "brand/prod-energy-enhancer.webp",
+  "prod-silent-nights": "brand/prod-silent-nights.webp",
+  "prod-alavida-patches": "brand/prod-alavida-patches.webp",
+  "prod-alavida-nightly-restore": "brand/prod-alavida-nightly-restore.webp",
+  "prod-alavida-facial-nectar": "brand/prod-alavida-facial-nectar.webp",
+  "prod-alavida-revive-eye-cream": "brand/prod-alavida-revive-eye-cream.webp",
+  "prod-alavida-trio": "brand/prod-alavida-trio.webp",
+  "prod-sp6-complete": "brand/prod-sp6-complete.webp",
+  "prod-aculife": "brand/prod-aculife.webp",
+  "prod-nirvana-legacy": null
+ }
+}

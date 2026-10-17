@@ -1,0 +1,39 @@
+{
+ "entries": [
+  {
+   "audience": "public",
+   "body": "LifeWave's official explanation: the body emits heat, including in the infrared spectrum. A patch placed on the body traps that infrared energy and reflects it back, stimulating specific points on the skin. The company says this can promote a general state of health and healthy activity, with effects unique to each patch. The patches are non-transdermal - nothing passes through the skin and no drugs or stimulants enter the body. The company also notes its science content draws on both phototherapy and acupressure, and that products are categorized under one or the other depending on local laws and regulations.",
+   "claim_label": "official fact",
+   "id": "photo-how-it-works",
+   "source_ref": "https://lifewave.com/mcarson/home/the-science",
+   "source_type": "official-site",
+   "title": "How the patches work - the company's explanation",
+   "topic": "phototherapy",
+   "updated": "2026-10-17"
+  },
+  {
+   "audience": "public",
+   "body": "In the company's official FAQ framing, phototherapy is the science of using light to improve the health of the body, in use for about 100 years. The company traces the idea back roughly two thousand years: the ancient Greeks studied the effects of different colored lights on the body, and the ancient Egyptians promoted health by focusing sunlight through colored glass onto areas of the body. LifeWave's version uses no lamp or external light source - the patch reflects the body's own infrared energy back to the skin.",
+   "claim_label": "official fact",
+   "id": "photo-what-is-phototherapy",
+   "source_ref": "https://2480581.lifewavenow.app/05d48f7c12",
+   "source_type": "official-site",
+   "title": "What is phototherapy? - the company's framing",
+   "topic": "phototherapy",
+   "updated": "2026-10-17"
+  },
+  {
+   "audience": "public",
+   "body": "Per the company's official FAQ: each patch is designed to reflect particular wavelengths of energy that stimulate specific points on the skin, which is how each patch is meant to provide its own distinct wellness benefits. No drugs or stimulants enter the body with any of them - the difference between patches is the wavelength pattern and the skin points they are designed around, not ingredients.",
+   "claim_label": "official fact",
+   "id": "photo-patch-differences",
+   "source_ref": "https://2480581.lifewavenow.app/05d48f7c12",
+   "source_type": "official-site",
+   "title": "What makes one patch different from another (company FAQ)",
+   "topic": "phototherapy",
+   "updated": "2026-10-17"
+  }
+ ],
+ "note": "How the company explains its technology, in the company's own framing, summarized in our words and attributed to the company throughout. These are the company's claims about its products, not verified medical facts.",
+ "topic": "phototherapy"
+}

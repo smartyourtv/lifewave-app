@@ -1,0 +1,105 @@
+{
+ "entries": [
+  {
+   "audience": "public",
+   "body": "The pattern on every official patch instruction: place the patch on the body at one of the locations shown on the product's official placement guide, on clean, dry skin. Patches may be worn for up to 12 hours, then discarded - each patch is single use, and the official warning says do not reuse a patch once it has been removed from the skin. The instructions also say to keep well hydrated while using the product. Wearing one patch a day is the standard routine for the daily patches (X39, X49), so one sleeve is roughly a month of daily use on the enrollment document's monthly pattern.",
+   "claim_label": "official fact",
+   "id": "usage-wear-basics",
+   "source_ref": "https://lifewave.com/kls64/home/our-product-difference",
+   "source_type": "official-site",
+   "title": "Wearing a patch - the official basics",
+   "topic": "usage",
+   "updated": "2026-10-17"
+  },
+  {
+   "audience": "public",
+   "body": "Per the official placement guide, the daytime patches are applied in the morning to clean, dry skin and worn up to 12 hours: X39 and X49 (one patch each), SP6 Complete, and the Y-Age patches. SP6's official instruction adds: rotate the patch between the recommended placements that give you the most control of your appetite.",
+   "claim_label": "official fact",
+   "id": "usage-day-patches",
+   "source_ref": "https://lifewave.com/kls64/home/our-product-difference",
+   "source_type": "official-site",
+   "title": "Daytime patches - morning application (official)",
+   "topic": "usage",
+   "updated": "2026-10-17"
+  },
+  {
+   "audience": "public",
+   "body": "Two patch products are evening products in the official instructions. Silent Nights: place one patch on the body at one of the locations shown, on clean, dry skin in the evening, worn up to 12 hours. Alavida patches: apply one patch to clean, dry skin each night before going to bed, worn up to 12 hours - the Alavida Regenerating Trio pairs the nightly patch with the line's creme and nectar applied to clean skin of the face and neck.",
+   "claim_label": "official fact",
+   "id": "usage-night-patches",
+   "source_ref": "https://lifewave.com/kls64/home/our-product-difference",
+   "source_type": "official-site",
+   "title": "Night patches - evening application (official)",
+   "topic": "usage",
+   "updated": "2026-10-17"
+  },
+  {
+   "audience": "public",
+   "body": "Two products are patch PAIRS, not single patches. Energy Enhancer: place one set on the body at one of the locations shown - always the WHITE patch on the RIGHT side of the body and the TAN patch on the LEFT side - applied to clean, dry skin in the morning, up to 12 hours. IceWave: place one white and one tan patch on the body, using any two of the shown locations at a time, on clean, dry, undamaged skin; the instructions note it can be used on any area of the body, worn up to 12 hours, and to only remove half of the patch backing until an effective placement site is located.",
+   "claim_label": "official fact",
+   "id": "usage-two-patch-sets",
+   "source_ref": "https://lifewave.com/kls64/home/our-product-difference",
+   "source_type": "official-site",
+   "title": "Two-patch sets - Energy Enhancer and IceWave (official)",
+   "topic": "usage",
+   "updated": "2026-10-17"
+  },
+  {
+   "audience": "public",
+   "body": "The Y-Age line is used on a rotation, per the official guide - not necessarily daily. Y-Age Aeon: rotate through the shown point locations, 5 to 7 days per week. Y-Age Glutathione: rotate through the shown point locations, 5 to 7 days per week. Y-Age Carnosine: rotate through the shown point locations, 1 to 3 days per week. Combining rule from the same guide: when combining any two Y-Age patches, use any 2 patches on any 2 of the Y-Age point locations shown, applying them on either the midline or the right side of the body. All are applied to clean, dry skin in the morning, worn up to 12 hours, and the instructions say to keep well hydrated.",
+   "claim_label": "official fact",
+   "id": "usage-yage-rotation",
+   "source_ref": "https://lifewave.com/kls64/home/our-product-difference",
+   "source_type": "official-site",
+   "title": "Y-Age rotation and combining (official)",
+   "topic": "usage",
+   "updated": "2026-10-17"
+  },
+  {
+   "audience": "public",
+   "body": "The warning printed with the official patch instructions: Remove immediately if discomfort or skin irritation occurs. Do not reuse a patch once removed from the skin. For external use only. Do not ingest. Do not use on wounds or damaged skin. Consult (the X49 wording: ask) a health professional before using if you have a health condition. Do not use if pregnant or nursing. Keep out of reach of children; not intended for use on children. Do not apply or use patches other than as directed. The company also carries the standard disclaimer on its product pages: statements have not been evaluated by the FDA, and products are not intended to diagnose, treat, cure, or prevent any disease.",
+   "claim_label": "official fact",
+   "id": "usage-warnings",
+   "source_ref": "https://lifewave.com/kls64/home/our-product-difference",
+   "source_type": "official-site",
+   "title": "Official warnings - read before first use",
+   "topic": "usage",
+   "updated": "2026-10-17"
+  },
+  {
+   "audience": "public",
+   "body": "AcuLife is the exception in the line: it is a patch product for HORSES ONLY. The company's official warning: AcuLife is intended for use on horses only, has not been tested on other animals, should not be used on any other animal, and should not be used on humans. It is a tan/white patch pair used with a small plastic bead, placed on either side of the area of concern on the horse. Full product entry: see prod-aculife in the products topic.",
+   "claim_label": "official fact",
+   "id": "usage-aculife-horses",
+   "source_ref": "https://www.lifewave.com/christinaditchkofsky/store/product/30001.022.001",
+   "source_type": "official-site",
+   "title": "AcuLife - for horses only (official)",
+   "topic": "usage",
+   "updated": "2026-10-17"
+  },
+  {
+   "audience": "public",
+   "body": "Per the official warnings: store patches in a cool, dark place, out of direct sunlight (the X49 instructions say store at room temperature). Patches are single-use - once a patch is removed from the skin it is discarded, never reapplied. If a patch causes discomfort or skin irritation, remove it immediately.",
+   "claim_label": "official fact",
+   "id": "usage-storage",
+   "source_ref": "https://lifewave.com/kls64/home/our-product-difference",
+   "source_type": "official-site",
+   "title": "Storage and handling (official)",
+   "topic": "usage",
+   "updated": "2026-10-17"
+  },
+  {
+   "audience": "public",
+   "body": "The X2O water system is the one non-patch product with its own maintenance cycle, and it is covered in the products topic rather than repeated here: both filter stages run on a 6-month replacement cycle - the primary filter up to 250 gallons (prod-x2o-primary-filter) and the secondary filter up to 150 gallons (prod-x2o-secondary-filter), replaced together as the filter bundle (prod-x2o-filter-bundle). See those entries for prices and specs.",
+   "claim_label": "official fact",
+   "id": "usage-x2o-filters",
+   "source_ref": "https://www.lifewave.com/christinaditchkofsky/store/product/LW-X2O-WM-USA",
+   "source_type": "official-site",
+   "title": "X2O filter replacement - pointer to the product entries",
+   "topic": "usage",
+   "updated": "2026-10-17"
+  }
+ ],
+ "note": "Official general usage only, summarized in our words from the company's official placement guide and official product pages/instructions. Product-specific detail lives in the products topic; this topic is the cross-product how-to and the official warnings.",
+ "topic": "usage"
+}
