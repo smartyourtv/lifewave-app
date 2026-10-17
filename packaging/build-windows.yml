@@ -1,0 +1,117 @@
+# Lifewave AI — Windows + Android release build.
+#
+# PENDING UPLOAD VIA THE GITHUB WEBSITE: the API credential used for
+# the rest of this repo lacks the `workflow` scope, so this file
+# cannot be pushed through the API (known hard limit, same as
+# windows-health). Add it via the GitHub website:
+#   repo -> Add file -> Create new file ->
+#   .github/workflows/build-windows.yml  (paste this file's contents)
+#
+# What it does (windows-2022 — pinned: Flutter 3.24.5 only knows the
+# VS 2019/2022 CMake generators; windows-latest now ships VS 2026,
+# which it mis-detects as VS 2019 and CMake then fails):
+#   * flutter build apk --release  -> Lifewave-latest.apk artifact
+#     (unsigned-by-CI-key debug-signed fallback unless a key.properties
+#     secret is configured; the locally signed APK remains the shipped
+#     Android asset — see README)
+#   * flutter build windows --release + Inno Setup via
+#     packaging/build-windows.ps1 -> Lifewave-Setup.exe
+#   * on a v* tag push, or on workflow_dispatch with a release_tag
+#     input: attach ONLY the Windows Setup.exe to the GitHub Release.
+#     The CI-built APK is an artifact-only fallback and must NEVER be
+#     attached to a release: the shipped Android asset is the locally
+#     signed APK, and overwriting it with a differently signed CI build
+#     would break upgrade-in-place on users' phones (fixed 2026-10-17
+#     before this file was first uploaded).
+
+name: Build Windows installer
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: "Optional: also publish a GitHub Release with this tag (e.g. v1.0.0)"
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: windows-2022
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Flutter (pinned)
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: "3.24.5"
+          channel: "stable"
+          cache: true
+
+      - name: Read packaging/app-config.json
+        id: cfg
+        shell: pwsh
+        run: |
+          $c = Get-Content packaging/app-config.json -Raw | ConvertFrom-Json
+          "display_name=$($c.display_name)" >> $env:GITHUB_OUTPUT
+          "exe_name=$($c.exe_name)"         >> $env:GITHUB_OUTPUT
+          "setup_name=$($c.setup_name)"     >> $env:GITHUB_OUTPUT
+          "version=$($c.version)"           >> $env:GITHUB_OUTPUT
+
+      - name: Flutter pub get
+        working-directory: app
+        run: flutter pub get
+
+      - name: Build Android APK (release)
+        working-directory: app
+        run: flutter build apk --release
+
+      - name: Stage the stable-named APK
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force dist | Out-Null
+          Copy-Item app/build/app/outputs/flutter-apk/app-release.apk dist/Lifewave-latest.apk
+
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Lifewave-latest.apk
+          path: dist/Lifewave-latest.apk
+          if-no-files-found: error
+
+      - name: Build Windows app + Inno Setup installer
+        shell: pwsh
+        run: |
+          # flutter build windows --release runs inside this script,
+          # then ISCC compiles packaging/setup.iss with /D defines
+          # from app-config.json, producing dist/Lifewave-Setup.exe.
+          ./packaging/build-windows.ps1
+
+      - name: Upload Windows installer artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.cfg.outputs.setup_name }}
+          path: dist/${{ steps.cfg.outputs.setup_name }}
+          if-no-files-found: error
+
+      - name: Attach to Release (tag push)
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          # Windows Setup.exe ONLY — never the CI-built APK (see header).
+          files: |
+            dist/${{ steps.cfg.outputs.setup_name }}
+
+      - name: Attach to Release (manual dispatch with release_tag)
+        if: github.event_name == 'workflow_dispatch' && inputs.release_tag != ''
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ inputs.release_tag }}
+          # Windows Setup.exe ONLY — never the CI-built APK (see header).
+          files: |
+            dist/${{ steps.cfg.outputs.setup_name }}
