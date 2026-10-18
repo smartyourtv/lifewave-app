@@ -12,7 +12,9 @@ import 'package:http/http.dart' as http;
 import 'package:path_provider/path_provider.dart';
 import 'package:sherpa_onnx/sherpa_onnx.dart' as sherpa;
 
+import 'crash_reporter.dart';
 import 'emotion.dart';
+import 'self_repair.dart';
 
 /// Voice output (SPEC §7.3) — ONE speech controller (PRE-BUILD-AUDIT §3:
 /// all playback goes through a single controller that tracks completion
@@ -320,6 +322,19 @@ class VoiceModelManager {
           _errorMessage =
               'The downloaded voice file looks incomplete ($bytes bytes). '
               'Delete it and try again on a good connection.';
+          // Self-repair log (standing rule): the incomplete file is
+          // quarantined — never enabled (this state is not ready, and
+          // the next download attempt deletes the leftover first).
+          SelfRepair.logOutcome(
+            success: true,
+            area: 'Kokoro voice download',
+            problem: 'The downloaded voice file was incomplete, so it '
+                'was not enabled.',
+            evidence: 'Downloaded $bytes bytes; expected about '
+                '${KokoroModelSource.expectedBytes}. The voice stays '
+                'on the device voice; the leftover file is removed '
+                'automatically at the next download attempt.',
+          );
           return false;
         }
         if (!await _verifier(archivePath)) {
@@ -328,6 +343,19 @@ class VoiceModelManager {
           _errorMessage = 'The downloaded voice file did not pass its '
               'safety check, so it was removed. Try again on a good '
               'connection.';
+          // Self-repair log (standing rule): corrupt payload removed
+          // BEFORE it could ever be enabled, verified by the awaited
+          // delete above; state stays not-ready.
+          SelfRepair.logOutcome(
+            success: true,
+            area: 'Kokoro voice download',
+            problem: 'The downloaded voice file failed its safety '
+                '(SHA-256) check, so it was removed before it could '
+                'be used.',
+            evidence: 'The archive hash did not match the pinned '
+                'value for the official voice file. The file was '
+                'deleted and the voice stays on the device voice.',
+          );
           return false;
         }
         _downloadedBytes = bytes;
@@ -349,6 +377,18 @@ class VoiceModelManager {
         _state = VoiceModelState.error;
         _errorMessage = 'The voice file could not be unpacked. Delete '
             'it and try again.';
+        // Self-repair log (standing rule): the partial unpack was
+        // removed (awaited above) and the voice never enabled.
+        SelfRepair.logOutcome(
+          success: true,
+          area: 'Kokoro voice download',
+          problem: 'The voice file could not be unpacked completely, '
+              'so the partial unpack was removed and the voice was '
+              'not enabled.',
+          evidence: 'After unpacking, one or more required model '
+              'files were missing. The partial folder was deleted and '
+              'the voice stays on the device voice.',
+        );
         return false;
       }
       await File(await _markerPath()).writeAsString(
@@ -793,9 +833,17 @@ class KokoroEngine implements VoiceEngine {
     try {
       await _synthesizer.initialize(await modelManager.extractedDir());
       return true;
-    } catch (e) {
+    } catch (e, s) {
       _startFailed = true;
       debugPrint('KokoroEngine start failed: $e');
+      // Risky-path logging (crash-report rule, v1.1.1): the failure is
+      // recorded as a non-fatal problem report — the app keeps going
+      // with the device voice, and the report explains why.
+      CrashReporter.recordCaught(
+        e,
+        s,
+        context: 'Kokoro voice start (loading the voice model)',
+      );
       return false;
     }
   }

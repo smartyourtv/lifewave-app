@@ -5,15 +5,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 
 import '../services/brand_assets.dart';
+import '../services/crash_reporter.dart';
 import '../services/emotion.dart';
 import '../services/guide_content.dart';
 import '../services/knowledge_db.dart';
 import '../services/m2_services.dart';
 import '../services/retrieval.dart';
+import '../services/share_service.dart';
 import '../services/social_store.dart';
 import '../services/voice_service.dart';
 import '../theme.dart';
 import '../widgets/common.dart';
+import 'crash_reports_screen.dart';
 import 'guide_screen.dart';
 
 class _TestState {
@@ -41,6 +44,12 @@ class DiagnosticsScreen extends StatefulWidget {
 
   /// M5: honest last update-check result label (from UpdateService).
   final String? updateStatusLabel;
+
+  /// v1.1.1 crash reporting (standing rule): the installed reporter +
+  /// share gateway for the reports view. Null reporter = reporting
+  /// could not start on this device — shown honestly, never faked.
+  final CrashReporter? crashReporter;
+  final ShareGateway? shareGateway;
   const DiagnosticsScreen({
     super.key,
     required this.db,
@@ -52,6 +61,8 @@ class DiagnosticsScreen extends StatefulWidget {
     this.tourSeen,
     this.referralLinkSet,
     this.updateStatusLabel,
+    this.crashReporter,
+    this.shareGateway,
   });
 
   @override
@@ -79,6 +90,7 @@ const List<_EmotionSample> _emotionSamples = [
 
 class _DiagnosticsScreenState extends State<DiagnosticsScreen> {
   int? _brandBytes;
+  int? _crashReportCount;
   bool _running = false;
   String? _micPermission;
   String _renderedBy = '';
@@ -97,6 +109,12 @@ class _DiagnosticsScreenState extends State<DiagnosticsScreen> {
     widget.brand.totalBytes().then((b) {
       if (mounted) setState(() => _brandBytes = b);
     });
+    final reporter = widget.crashReporter;
+    if (reporter != null) {
+      reporter.reportCount().then((n) {
+        if (mounted) setState(() => _crashReportCount = n);
+      });
+    }
     final services = widget.services;
     if (services != null) {
       services.voice.kokoroEngine.modelManager.refresh().then((_) {
@@ -277,6 +295,56 @@ class _DiagnosticsScreenState extends State<DiagnosticsScreen> {
                             ? 'Link set — QR ready'
                             : 'No link set yet',
                   ),
+                ],
+              ),
+            ),
+          ),
+          const SizedBox(height: 12),
+          Card(
+            child: Padding(
+              padding: const EdgeInsets.all(16),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text('Crash & error reports',
+                      style: Theme.of(context).textTheme.titleMedium),
+                  const Divider(),
+                  const Text(
+                    'If the app stops working or hits a problem, it '
+                    'saves a report here and a copy goes to your '
+                    'Downloads folder. Reports are never sent anywhere '
+                    'unless you share one yourself.',
+                    style: TextStyle(fontSize: 13),
+                  ),
+                  const SizedBox(height: 8),
+                  _InfoRow(
+                    'Reports saved on this device',
+                    widget.crashReporter == null
+                        ? 'Problem reporting could not start on this device'
+                        : _crashReportCount == null
+                            ? 'counting…'
+                            : '${_crashReportCount!}',
+                  ),
+                  if (widget.crashReporter != null &&
+                      widget.shareGateway != null) ...[
+                    const SizedBox(height: 8),
+                    OutlinedButton.icon(
+                      onPressed: () async {
+                        await Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (_) => CrashReportsScreen(
+                              reporter: widget.crashReporter!,
+                              share: widget.shareGateway!,
+                            ),
+                          ),
+                        );
+                        final n = await widget.crashReporter!.reportCount();
+                        if (mounted) setState(() => _crashReportCount = n);
+                      },
+                      icon: const Icon(Icons.description_outlined, size: 16),
+                      label: const Text('View reports'),
+                    ),
+                  ],
                 ],
               ),
             ),

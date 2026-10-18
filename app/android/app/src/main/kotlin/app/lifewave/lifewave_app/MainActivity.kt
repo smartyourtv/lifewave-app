@@ -1,13 +1,18 @@
 package app.lifewave.lifewave_app
 
+import android.content.ContentValues
 import android.media.AudioAttributes
 import android.media.AudioFormat
 import android.media.AudioTrack
+import android.os.Build
+import android.os.Environment
 import android.os.Handler
 import android.os.Looper
+import android.provider.MediaStore
 import io.flutter.embedding.android.FlutterActivity
 import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.plugin.common.MethodChannel
+import java.io.File
 import java.util.concurrent.Executors
 import kotlin.math.max
 
@@ -25,8 +30,10 @@ import kotlin.math.max
 /// always delivered on the main thread.
 class MainActivity : FlutterActivity() {
     private val pcmChannelName = "lifewave/pcm_player"
+    private val downloadsChannelName = "lifewave/downloads"
     private val mainHandler = Handler(Looper.getMainLooper())
     private val pcmExecutor = Executors.newCachedThreadPool()
+    private val ioExecutor = Executors.newSingleThreadExecutor()
 
     @Volatile
     private var currentTrack: AudioTrack? = null
@@ -57,6 +64,74 @@ class MainActivity : FlutterActivity() {
                     else -> result.notImplemented()
                 }
             }
+        // Crash-report Downloads mirror (v1.1.1): writes a report text
+        // file into the PUBLIC Downloads folder. API 29+ goes through
+        // MediaStore (no permission needed); older APIs try the public
+        // directory directly and report false when the device refuses.
+        // Returns Boolean success; never throws back to Dart.
+        MethodChannel(flutterEngine.dartExecutor.binaryMessenger, downloadsChannelName)
+            .setMethodCallHandler { call, result ->
+                if (call.method == "writeTextFile") {
+                    val name = call.argument<String>("name")
+                    val contents = call.argument<String>("contents")
+                    if (name == null || contents == null) {
+                        result.error("bad_args", "writeTextFile needs name and contents", null)
+                    } else {
+                        ioExecutor.execute {
+                            val ok = writeToDownloads(name, contents)
+                            mainHandler.post { result.success(ok) }
+                        }
+                    }
+                } else {
+                    result.notImplemented()
+                }
+            }
+    }
+
+    private fun writeToDownloads(name: String, contents: String): Boolean {
+        return try {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                val resolver = applicationContext.contentResolver
+                val collection =
+                    MediaStore.Downloads.getContentUri(MediaStore.VOLUME_EXTERNAL_PRIMARY)
+                // Replace an earlier copy of the same report name.
+                try {
+                    resolver.delete(
+                        collection,
+                        "${MediaStore.Downloads.DISPLAY_NAME} = ?",
+                        arrayOf(name)
+                    )
+                } catch (_: Exception) {
+                    // Deleting a prior copy is best-effort; MediaStore
+                    // would otherwise add a "(1)" duplicate.
+                }
+                val values = ContentValues().apply {
+                    put(MediaStore.Downloads.DISPLAY_NAME, name)
+                    put(MediaStore.Downloads.MIME_TYPE, "text/plain")
+                    put(
+                        MediaStore.Downloads.RELATIVE_PATH,
+                        Environment.DIRECTORY_DOWNLOADS
+                    )
+                }
+                val uri = resolver.insert(collection, values) ?: return false
+                resolver.openOutputStream(uri)?.use { out ->
+                    out.write(contents.toByteArray(Charsets.UTF_8))
+                } ?: return false
+                true
+            } else {
+                @Suppress("DEPRECATION")
+                val dir = Environment.getExternalStoragePublicDirectory(
+                    Environment.DIRECTORY_DOWNLOADS
+                )
+                if (!dir.exists()) dir.mkdirs()
+                File(dir, name).writeText(contents, Charsets.UTF_8)
+                true
+            }
+        } catch (_: Exception) {
+            // Permission refused / no Downloads volume — the report
+            // still exists in the app's own store (Dart side contract).
+            false
+        }
     }
 
     private fun playBlocking(pcm: ByteArray, sampleRate: Int, result: MethodChannel.Result) {

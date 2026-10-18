@@ -25,11 +25,13 @@ import 'screens/tour_screen.dart';
 import 'screens/translator_screens.dart';
 import 'services/brand_assets.dart';
 import 'services/cloud_escalation.dart';
+import 'services/crash_reporter.dart';
 import 'services/emotion.dart';
 import 'services/knowledge_db.dart';
 import 'services/local_store.dart';
 import 'services/m2_services.dart';
 import 'services/reminder_service.dart';
+import 'services/self_repair.dart';
 import 'services/share_service.dart';
 import 'services/social_store.dart';
 import 'services/translation_service.dart';
@@ -41,7 +43,18 @@ import 'widgets/update_banner.dart';
 import 'widgets/social_widgets.dart';
 
 void main() {
-  runApp(const LifewaveApp());
+  // Standing crash-report rule (v1.1.1): the whole app runs inside a
+  // Zone guard and the crash handlers are installed BEFORE runApp, so
+  // even a crash during startup leaves its report — first in the app's
+  // own storage, with a copy mirrored to the Downloads folder. Reports
+  // are never uploaded anywhere (see services/crash_reporter.dart).
+  runZonedGuarded<Future<void>>(() async {
+    WidgetsFlutterBinding.ensureInitialized();
+    await CrashReporter.install();
+    runApp(const LifewaveApp());
+  }, (error, stack) {
+    CrashReporter.recordZoneError(error, stack);
+  });
 }
 
 /// App root. First route is the branded splash while the database, brand
@@ -107,7 +120,28 @@ class _LifewaveAppState extends State<LifewaveApp> {
   Future<_LoadedData> _load() async {
     // Keep the splash visible briefly so it reads as a splash, not a flash.
     final splashMin = Future<void>.delayed(const Duration(milliseconds: 700));
-    final db = await KnowledgeDb.load();
+    KnowledgeDb? loadedDb;
+    try {
+      loadedDb = await KnowledgeDb.load();
+    } catch (e) {
+      // Self-repair (standing rule): the database is bundled read-only
+      // assets, so the restore path is a fresh load from the bundle —
+      // one automatic attempt, verified by a real entry count, and the
+      // outcome is logged either way. If the bundle itself is damaged
+      // there is no state repair to make: startup still fails CLOSED
+      // to the plain-language error screen below.
+      final repaired = await SelfRepair.attempt(
+        area: 'Knowledge database',
+        problem: 'The knowledge database could not be opened.',
+        evidence: 'The first open failed: $e',
+        repair: () async {
+          loadedDb = await KnowledgeDb.load();
+        },
+        verify: () async => (loadedDb?.entryCount ?? 0) > 0,
+      );
+      if (!repaired) rethrow;
+    }
+    final db = loadedDb!;
     final brand = await BrandAssets.load();
     // M3 local stores: the user's own posts/replies/prospects, loaded
     // from the app-private documents file. A corrupt file degrades to
@@ -119,6 +153,20 @@ class _LifewaveAppState extends State<LifewaveApp> {
       reminders: reminders,
     );
     await socialStore.load();
+    // Self-repair performed inside the store (a damaged saved-lists
+    // file degrades to empty lists and is preserved aside, never a
+    // crash): log the outcome into the report store (standing rule).
+    final storeWarning = socialStore.storeWarning;
+    if (storeWarning != null) {
+      SelfRepair.logOutcome(
+        success: true,
+        area: 'Saved posts, replies and prospects',
+        problem: 'A saved file for posts, replies and prospects was '
+            'damaged, so the app started with empty lists instead of '
+            'crashing, and kept the damaged file aside.',
+        evidence: storeWarning,
+      );
+    }
     try {
       // Bounded: a platform channel that never answers (unsupported
       // platform, test host) must never hang app startup — reminders
@@ -150,17 +198,42 @@ class _LifewaveAppState extends State<LifewaveApp> {
     try {
       final prefs = await SharedPreferences.getInstance();
       prefsInstance = prefs;
-      displayName = prefs.getString(PrefKeys.displayName);
-      welcomeDismissed = prefs.getBool(PrefKeys.welcomeDismissed) ?? false;
-      emotionLevel =
-          EmotionLevel.fromName(prefs.getString(PrefKeys.emotionLevel));
-      voice = PrefKeys.decodeVoice(prefs.getString(PrefKeys.voiceKey));
-      final langCode = prefs.getString(PrefKeys.chatLanguage);
+      // Self-repair (standing rule): settings load key-by-key — a
+      // damaged entry is reset to its safe default and the repair is
+      // logged, while every healthy entry is preserved exactly as
+      // stored. (Before v1.1.1 one blanket catch discarded ALL
+      // settings when any single one was damaged.)
+      final loadedPrefs = await SafePrefsLoader(
+        SharedPreferencesAccess(prefs),
+        voiceValidator: (raw) => PrefKeys.decodeVoice(raw) != null,
+      ).load();
+      displayName = loadedPrefs.displayName;
+      welcomeDismissed = loadedPrefs.welcomeDismissed;
+      emotionLevel = EmotionLevel.fromName(loadedPrefs.emotionLevelName);
+      voice = PrefKeys.decodeVoice(loadedPrefs.voiceRaw);
+      final langCode = loadedPrefs.chatLanguageCode;
       if (langCode != null) chatLanguage = languageByCode(langCode);
-      tourSeen = prefs.getBool(PrefKeys.tourSeen) ?? false;
-      referralLink = prefs.getString(PrefKeys.referralLink);
-    } catch (_) {
-      // Preferences unavailable: defaults apply; the app still works.
+      tourSeen = loadedPrefs.tourSeen;
+      referralLink = loadedPrefs.referralLink;
+      for (final r in loadedPrefs.repairs) {
+        SelfRepair.logOutcome(
+          success: r.success,
+          area: 'Saved settings',
+          problem: r.problem,
+          evidence: 'Setting "${r.subject}": ${r.evidence}',
+        );
+      }
+    } catch (e) {
+      // The settings store itself could not be opened: no selective
+      // repair is possible from here — defaults apply (the app still
+      // works) and the failed repair goes on record.
+      SelfRepair.logOutcome(
+        success: false,
+        area: 'Saved settings',
+        problem: 'The settings store could not be opened at all, so '
+            'the app started with its safe default settings.',
+        evidence: 'Opening the settings store failed: $e',
+      );
     }
     // M5 updater: real HTTP fetcher in the app; tests use fakes.
     // If preferences were unavailable, the updater still works with
@@ -342,15 +415,31 @@ class _MainShellState extends State<_MainShell> {
     // M5: check for updates on app start — throttled to at most once
     // per 24h inside the service, silent on failure/offline.
     WidgetsBinding.instance.addPostFrameCallback((_) async {
-      await widget.data.updateService.check();
+      final result = await widget.data.updateService.check();
+      _recordUpdateCheckFailure(result);
       if (mounted) setState(() {});
     });
   }
 
   UpdateService get _updater => widget.data.updateService;
 
+  /// Risky-path logging (crash-report rule): a failed update check is
+  /// recorded as a non-fatal problem report. Bounded by the service's
+  /// own 24h throttle for automatic checks.
+  void _recordUpdateCheckFailure(UpdateCheckResult result) {
+    if (result.status == UpdateCheckStatus.couldNotCheck) {
+      CrashReporter.recordCaught(
+        Exception('The update check could not finish '
+            '(no connection, or the answer could not be read).'),
+        null,
+        context: 'Update check',
+      );
+    }
+  }
+
   Future<void> _checkUpdateNow() async {
-    await _updater.check(force: true);
+    final result = await _updater.check(force: true);
+    _recordUpdateCheckFailure(result);
     if (mounted) setState(() {});
   }
 
@@ -565,6 +654,8 @@ class _MainShellState extends State<_MainShell> {
           referralLinkSet:
               _referralLink != null && _referralLink!.trim().isNotEmpty,
           updateStatusLabel: _updater.lastResult.diagnosticsLabel,
+          crashReporter: CrashReporter.active,
+          shareGateway: _socialDeps.share,
         )),
         onOpenSettings: () => _push(SettingsScreen(
           initialName: _displayName,

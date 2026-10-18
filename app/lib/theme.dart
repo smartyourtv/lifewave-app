@@ -12,14 +12,17 @@ abstract class LwColors {
 }
 
 /// App-wide constants. The version string matches pubspec.yaml
-/// (version: 1.0.0+1) — package_info_plus is deliberately not a dependency
+/// (version: 1.1.1+3) — package_info_plus is deliberately not a dependency
 /// in M1 (minimal dependency rule), so this constant is the source the
 /// Diagnostics/About screens show; bump it with the pubspec version.
+/// All three fields move together: [UpdateService] compares
+/// [buildNumber] against the remote versionCode, so a stale buildNumber
+/// makes the app offer an "update" to itself.
 abstract class AppInfo {
   static const String appName = 'LifeWave AI';
-  static const String version = '1.0.0';
-  static const int buildNumber = 1;
-  static const String versionLabel = 'Version 1.1.0 (build 2)';
+  static const String version = '1.1.1';
+  static const int buildNumber = 3;
+  static const String versionLabel = 'Version 1.1.1 (build 3)';
 
   /// SPEC §7.12 guardrail line — exact wording, shown in About and once
   /// on first run.
