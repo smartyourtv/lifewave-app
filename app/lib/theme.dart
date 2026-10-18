@@ -19,7 +19,7 @@ abstract class AppInfo {
   static const String appName = 'LifeWave AI';
   static const String version = '1.0.0';
   static const int buildNumber = 1;
-  static const String versionLabel = 'Version 1.0.0 (build 1)';
+  static const String versionLabel = 'Version 1.1.0 (build 2)';
 
   /// SPEC §7.12 guardrail line — exact wording, shown in About and once
   /// on first run.

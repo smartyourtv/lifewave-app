@@ -421,10 +421,28 @@ void main() {
       await raf.close();
     }
 
+    // v1.1.0: download() also verifies (hash) and unpacks. These tests
+    // inject a pass-through verifier and a fake extractor that lays
+    // down the model-file tree the real one would.
+    Future<void> fakeExtract(String archive, String destDir) async {
+      final dir =
+          Directory('$destDir/${KokoroModelSource.extractedDirName}');
+      await dir.create(recursive: true);
+      for (final name in [
+        KokoroModelSource.modelFileName,
+        KokoroModelSource.voicesFileName,
+        KokoroModelSource.tokensFileName,
+      ]) {
+        await File('${dir.path}/$name').writeAsString('fake');
+      }
+    }
+
     test('state transitions: not-downloaded -> downloading -> ready -> deleted',
         () async {
       final manager = VoiceModelManager(
         dirProvider: () async => tmp.path,
+        verifier: (_) async => true,
+        extractor: fakeExtract,
         downloader: (url, dest, onProgress) async {
           onProgress(0.5);
           await writeSized(dest, KokoroModelSource.expectedBytes);
@@ -444,6 +462,8 @@ void main() {
     test('wrong-size download lands in error state, not ready', () async {
       final manager = VoiceModelManager(
         dirProvider: () async => tmp.path,
+        verifier: (_) async => true,
+        extractor: fakeExtract,
         downloader: (url, dest, onProgress) async {
           await writeSized(dest, 1024); // truncated download
         },
@@ -458,6 +478,8 @@ void main() {
         () async {
       final manager = VoiceModelManager(
         dirProvider: () async => tmp.path,
+        verifier: (_) async => true,
+        extractor: fakeExtract,
         downloader: (url, dest, onProgress) async =>
             throw Exception('no network'),
       );
@@ -481,10 +503,14 @@ void main() {
       expect(result.spoken, isTrue);
       expect(tts.spoken.single, 'Hello there.');
       expect(result.renderedBy, contains('Device voice'));
-      // Kokoro is the labeled stub in this build.
+      // Kokoro is a real engine in v1.1.0, but its voice file is not
+      // downloaded in this fake setup — so it is unavailable, with an
+      // honest reason, and the device engine speaks.
       expect(voice.kokoroEngine.isAvailable, isFalse);
-      expect(voice.kokoroEngine.unavailableReason, contains('not included'));
+      expect(
+          voice.kokoroEngine.unavailableReason, contains('not been downloaded'));
       expect(voice.activeEngine.engineId, 'device');
+      expect(voice.activeEngineLabel, 'Device voice');
     });
 
     test('urgent context: playful marker never reaches the TTS platform',

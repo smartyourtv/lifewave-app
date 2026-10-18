@@ -1,7 +1,7 @@
 name: lifewave_app
 description: "LifeWave AI — an independent Brand Partner tool: offline product knowledge, catalog and chat Q&A grounded in the bundled database."
 publish_to: 'none'
-version: 1.0.0+1
+version: 1.1.0+2
 
 environment:
   sdk: 3.5.4
@@ -28,6 +28,12 @@ dependencies:
   flutter_timezone: 3.0.1
   timezone: 0.9.4
   qr_flutter: 4.1.0
+  # v1.1.0 Kokoro voice: on-device synthesis (sherpa-onnx, Apache-2.0).
+  # 1.13.8's own pubspec pins every platform package at exactly 1.13.8 —
+  # the matched set structurally avoids the M2 version-skew blocker.
+  sherpa_onnx: 1.13.8
+  archive: 3.6.1
+  crypto: 3.0.7
 
 dev_dependencies:
   flutter_test:

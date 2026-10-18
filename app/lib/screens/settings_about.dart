@@ -684,7 +684,11 @@ class _KokoroModelCardState extends State<_KokoroModelCard> {
               style: TextStyle(fontWeight: FontWeight.w700),
             ),
             const SizedBox(height: 6),
-            const Text(KokoroEngine.stubReason),
+            const Text(KokoroEngine.aboutText),
+            if (!widget.services.voice.kokoroEngine.isAvailable) ...[
+              const SizedBox(height: 6),
+              Text(widget.services.voice.kokoroEngine.unavailableReason),
+            ],
             const SizedBox(height: 8),
             Text('Voice file: ${manager.stateLabel}'
                 '${manager.downloadedBytes > 0 ? ' (${(manager.downloadedBytes / 1048576).toStringAsFixed(0)} MB)' : ''}'),
