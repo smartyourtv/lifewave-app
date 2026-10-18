@@ -57,6 +57,15 @@ add_subdirectory("runner")
 # them to the application.
 include(flutter/generated_plugins.cmake)
 
+# flutter_tts 4.2.2 (Windows): its CppWinRT .targets import does not put
+# WindowsApp.lib on the plugin's link line under the VS2022 generator, so the
+# WINRT_IMPL_Ro* symbols (RoGetActivationFactory, RoTransformError, ...) are
+# unresolved at link time (LNK2019 / LNK1120). Link the umbrella library
+# explicitly. Guarded so a plugin rename/removal never breaks the build.
+if(TARGET flutter_tts_plugin)
+  target_link_libraries(flutter_tts_plugin PRIVATE windowsapp.lib)
+endif()
+
 
 # === Installation ===
 # Support files are copied into place next to the executable, so that it can
