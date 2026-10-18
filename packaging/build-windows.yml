@@ -7,9 +7,7 @@
 #   repo -> Add file -> Create new file ->
 #   .github/workflows/build-windows.yml  (paste this file's contents)
 #
-# What it does (windows-2022 — pinned: Flutter 3.24.5 only knows the
-# VS 2019/2022 CMake generators; windows-latest now ships VS 2026,
-# which it mis-detects as VS 2019 and CMake then fails):
+# What it does (windows-latest):
 #   * flutter build apk --release  -> Lifewave-latest.apk artifact
 #     (unsigned-by-CI-key debug-signed fallback unless a key.properties
 #     secret is configured; the locally signed APK remains the shipped
@@ -45,6 +43,11 @@ jobs:
     runs-on: windows-2022
     steps:
       - uses: actions/checkout@v4
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
 
       - name: Set up Flutter (pinned)
         uses: subosito/flutter-action@v2
